@@ -1,0 +1,264 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #92D8AE;
+  width: 100%;
+  height: 200vh;
+}
+
+.mouse-stalker {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #5BD0D0;
+  opacity: 0.8;
+  border-radius: 50%;
+  transform: translate(0, 0);
+  transition: transform 0.1s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+}
+
+.seek_content {
+  width: 100%;
+  height: 100vh;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 0;
+}
+.seek_content .backBtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+}
+.seek_content .backBtn .crossBtn {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.seek_content .backBtn .crossBtn::before, .seek_content .backBtn .crossBtn::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  transition: all 0.5s;
+  width: 30px;
+  height: 3px;
+  background-color: #2c2c2c;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: ease-in-out 0.3s;
+}
+.seek_content .backBtn .crossBtn::after {
+  transform: rotate(-45deg);
+}
+.seek_content .backBtn .crossBtn:hover::after {
+  transform: scale(1.3) rotate(45deg);
+}
+.seek_content .backBtn .crossBtn:hover::before {
+  transform: scale(1.3) rotate(-45deg);
+}
+.seek_content .underTriangle {
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  animation: fluffy infinite 1.5s;
+}
+.seek_content .underTriangle figure {
+  width: 100%;
+  height: 100%;
+}
+.seek_content .underTriangle figure .icon {
+  width: 100%;
+  height: 100%;
+}
+@keyframes fluffy {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.seek_content .seek_image {
+  width: 50%;
+  height: 60vh;
+}
+.seek_content .seek_image figure {
+  width: 100%;
+}
+.seek_content .seek_image figure img {
+  width: 100%;
+}
+.seek_content .seek_infomation {
+  width: 25%;
+  height: 70vh;
+  margin-top: 120px;
+  display: flex;
+  flex-flow: column;
+}
+.seek_content .seek_infomation p, .seek_content .seek_infomation h3 {
+  text-align: right;
+}
+.seek_content .seek_infomation p {
+  font-size: 2rem;
+}
+.seek_content .seek_infomation p span {
+  color: rgb(194, 55, 31);
+}
+.seek_content .seek_infomation h3 {
+  font-size: 9.6rem;
+}
+.seek_content .seek_infomation .seek_infomation_flex {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row;
+}
+.seek_content .seek_infomation .seek_infomation_flex .seek_infomation_box {
+  width: 120px;
+  height: 80px;
+  margin: 10px 5px 0;
+  background: #308929;
+}
+.seek_content .seek_infomation .seek_infomation_flex .seek_infomation_box p, .seek_content .seek_infomation .seek_infomation_flex .seek_infomation_box h4 {
+  color: #eee;
+  text-align: center;
+  line-height: 35px;
+}
+.seek_content .seek_infomation .seek_infomation_flex .seek_infomation_box p {
+  font-size: 12px;
+}
+.seek_content .seek_infomation .seek_infomation_flex .seek_infomation_box h4 {
+  font-size: 16px;
+}
+.seek_content .seek_infomation .seek_infomation_ture .seek_ture_title {
+  width: 140px;
+  height: 30px;
+  background: #308929;
+  margin: 20px 5px 0 auto;
+}
+.seek_content .seek_infomation .seek_infomation_ture .seek_ture_title p {
+  color: #eee;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 30px;
+}
+.seek_content .seek_infomation .seek_infomation_ture .seek_ture_box {
+  width: 380px;
+  height: 60px;
+  background: #308929;
+  margin: 50px 5px 20px auto;
+}
+.seek_content .seek_infomation .seek_infomation_ture .seek_ture_box h4 {
+  color: #eee;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 60px;
+}
+.seek_content .seek_watches {
+  width: 85%;
+  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.seek_content .seek_watches .watches_content {
+  width: 200px;
+  height: 60px;
+  background: #308929;
+}
+.seek_content .seek_watches .watches_content a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.seek_content .seek_watches .watches_content a p {
+  color: #eee;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 60px;
+  transition: 0.3s ease-in-out;
+}
+.seek_content .seek_watches .watches_content a p:hover {
+  color: rgb(194, 55, 31);
+  letter-spacing: 0.2rem;
+}
+.seek_content h2 {
+  width: 100%;
+  font-size: 6rem;
+  text-align: center;
+  color: #2c2c2c;
+  margin-top: 120px;
+}
+.seek_content .work_infomation {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seek_content .work_infomation .work_content {
+  width: 90%;
+  height: 100%;
+  border: 1px solid #308929;
+}
+.seek_content .work_infomation .work_content .work_flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.seek_content .work_infomation .work_content .work_flex .work_overview {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  flex-wrap: wrap;
+  flex-flow: column;
+}
+.seek_content .work_infomation .work_content .work_flex .work_overview .work_text {
+  margin: 15px;
+}
+.seek_content .work_infomation .work_content .work_flex .work_overview .work_text h2 {
+  font-size: 22px;
+  margin: 0;
+  text-align: left;
+  color: rgb(194, 55, 31);
+}
+.seek_content .work_infomation .work_content .work_flex .work_overview .work_text p {
+  font-size: 18px;
+}
+.seek_content .work_infomation .work_content .work_flex .work_thoughts {
+  width: 60%;
+}
+.seek_content .work_infomation .work_content .work_flex .work_thoughts .work_text {
+  margin: 20px 30px;
+}
+.seek_content .work_infomation .work_content .work_flex .work_thoughts .work_text h2 {
+  font-size: 22px;
+  margin: 0;
+  text-align: left;
+  color: rgb(194, 55, 31);
+}
+.seek_content .work_infomation .work_content .work_flex .work_thoughts .work_text p {
+  font-size: 18px;
+}
+
+span {
+  font-weight: bold;
+}
