@@ -4,7 +4,6 @@ $textColor:#2c2c2c;
 $baseColor:#F2FFF4;
 $borderColor:#222;
 
-
 html{
   font-size: 62.5%;
 }
@@ -17,7 +16,7 @@ body{
   position: fixed;
   width: 10px;
   height: 10px;
-  background:#e6ac00;
+  background:#d1b3aa;
   opacity: .8;
   border-radius: 50%;
   transform: translate(0,0);
@@ -26,7 +25,7 @@ body{
   z-index: 999;
 }
 
-.famdog_content{
+.florita_content{
   width: 100%;
   height: 100vh;
   margin-top: 20px;
@@ -99,7 +98,7 @@ body{
       transform: translateY(0px);
     }
   }
-  .famdog_image{
+  .florita_image{
     width: 50%;
     height: 60vh;
     figure{
@@ -109,7 +108,7 @@ body{
       }
     }
   }
-  .famdog_infomation{
+  .florita_infomation{
     width: 25%;
     height: 70vh;
     margin-top: 120px;
@@ -122,27 +121,26 @@ body{
     p{
       font-size: 2rem;
       span{
-        color: $mainColor;
+        color: #9C2C19;
       }
     }
     h3{
       font-size: 6rem;
     }
-    .famdog_infomation_flex{
+    .florita_infomation_flex{
       width: 100%;
       height: 320px;
       display: flex;
       justify-content:space-around;
-      flex-flow: column;
       align-items: flex-end;
+      flex-flow: column;
       // border: #A65F37 1px solid;
-      .famdog_infomation_box{
-        width: 360px;
+      .florita_infomation_box{
+        width: 350px;
         height: 60px;
         margin:10px 5px 0;
         background: $bgColor;
         border:1px solid $mainColor;
-        
         p,h4{
           color: $mainColor;
           text-align: center;
@@ -157,7 +155,7 @@ body{
       }
     }
   }
-  .famdog_watches{
+  .florita_watches{
     width: 85%;
     height: 5vh;
     display: flex;
@@ -175,14 +173,14 @@ body{
         height: 100%;
         text-decoration: none;
         p{
-          color: $mainColor;
+          color: $baseColor;
           font-size: 1.5rem;
           text-align:center;
           line-height: 60px;
           transition: .3s ease-in-out;
         }
         p:hover{
-          // color: #404040;
+          // color:;
           letter-spacing: .6rem;
           box-shadow:3px 3px 3px #404040;
         }
@@ -203,10 +201,11 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    box-shadow: #2c2c2c;
     .work_content{
       width: 90%;
       height: 100%;
-      border:1px solid $borderColor;
+      border: 1px solid $borderColor;
       .work_flex{
         width: 100%;
         display: flex;
@@ -227,7 +226,7 @@ body{
               font-size: 20px;
               margin: 0;
               text-align: left;
-              color: $mainColor;
+              color:$mainColor;
 
             }
             p{
@@ -245,7 +244,7 @@ body{
             // width: 40%;
             h2{
               font-size: 20px;
-              margin: 0;
+              margin-top: 20px;
               text-align: left;
               color: $mainColor;
             }

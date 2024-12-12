@@ -1,5 +1,5 @@
 $bgColor:#F2FFF4;
-$mainColor:#00430F;
+$mainColor:#92D8AE;
 $textColor:#2c2c2c;
 $baseColor:#F2FFF4;
 $borderColor:#222;
@@ -122,7 +122,7 @@ body{
     p{
       font-size: 2rem;
       span{
-        color: $mainColor;
+        color: #9C2C19;
       }
     }
     h3{
@@ -140,11 +140,11 @@ body{
         width: 360px;
         height: 60px;
         margin:10px 5px 0;
-        background: $bgColor;
-        border:1px solid $mainColor;
+        background: $mainColor;
+        border:1px solid $borderColor;
         
         p,h4{
-          color: $mainColor;
+          color: #404040;
           text-align: center;
           line-height: 60px;
         }
@@ -166,8 +166,8 @@ body{
     .watches_content{
       width: 200px;
       height: 60px;
-      background: none;
-      border:1px solid $mainColor;
+      background: $mainColor;
+      border:1px solid $borderColor;
 
       a{
         display: block;
@@ -175,14 +175,14 @@ body{
         height: 100%;
         text-decoration: none;
         p{
-          color: $mainColor;
+          color: #404040;
           font-size: 1.5rem;
           text-align:center;
           line-height: 60px;
           transition: .3s ease-in-out;
         }
         p:hover{
-          // color: #404040;
+          color: #404040;
           letter-spacing: .6rem;
           box-shadow:3px 3px 3px #404040;
         }
@@ -206,7 +206,7 @@ body{
     .work_content{
       width: 90%;
       height: 100%;
-      border:1px solid $borderColor;
+        border:1px solid $borderColor;
       .work_flex{
         width: 100%;
         display: flex;
@@ -227,7 +227,7 @@ body{
               font-size: 20px;
               margin: 0;
               text-align: left;
-              color: $mainColor;
+              color: #9C2C19;
 
             }
             p{
@@ -247,7 +247,7 @@ body{
               font-size: 20px;
               margin: 0;
               text-align: left;
-              color: $mainColor;
+              color: #9C2C19;
             }
             p{
               font-size: 16px;

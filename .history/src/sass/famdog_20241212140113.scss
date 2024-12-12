@@ -182,7 +182,7 @@ body{
           transition: .3s ease-in-out;
         }
         p:hover{
-          // color: #404040;
+          color: #404040;
           letter-spacing: .6rem;
           box-shadow:3px 3px 3px #404040;
         }
@@ -206,7 +206,7 @@ body{
     .work_content{
       width: 90%;
       height: 100%;
-      border:1px solid $borderColor;
+        border:1px solid $borderColor;
       .work_flex{
         width: 100%;
         display: flex;
