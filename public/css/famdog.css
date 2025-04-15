@@ -241,3 +241,38 @@ body {
 .famdog_content .work_infomation .work_content .work_flex .work_thoughts .work_text p {
   font-size: 16px;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    height: 200vh;
+  }
+  .famdog_content .famdog_infomation {
+    margin-left: 10px;
+  }
+  .famdog_content .famdog_infomation p {
+    font-size: 12px;
+  }
+  .famdog_content .famdog_infomation h3 {
+    font-size: 3.2rem;
+    margin-bottom: 50px;
+  }
+  .famdog_content .famdog_infomation .famdog_infomation_flex .famdog_infomation_box {
+    width: 380px;
+  }
+  .famdog_content .work_infomation .work_content {
+    height: 700px;
+    margin-top: 100px;
+  }
+  .famdog_content .work_infomation .work_content .work_flex .work_overview .work_text h2 {
+    font-size: 1.4rem;
+  }
+  .famdog_content .work_infomation .work_content .work_flex .work_overview .work_text p {
+    font-size: 1.2rem;
+  }
+  .famdog_content .work_infomation .work_content .work_flex .work_thoughts .work_text h2 {
+    font-size: 1.4rem;
+  }
+  .famdog_content .work_infomation .work_content .work_flex .work_thoughts .work_text p {
+    font-size: 1.2rem;
+  }
+}

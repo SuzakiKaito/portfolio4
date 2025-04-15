@@ -243,3 +243,38 @@ body {
 span {
   font-weight: bold;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    height: 230vh;
+  }
+  .seek_content .seek_infomation {
+    margin-left: 10px;
+  }
+  .seek_content .seek_infomation p {
+    font-size: 12px;
+  }
+  .seek_content .seek_infomation h3 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+  }
+  .seek_content .seek_infomation .seek_infomation_flex .seek_infomation_box {
+    width: 380px;
+  }
+  .seek_content .work_infomation .work_content {
+    height: 1000px;
+    margin-top: 300px;
+  }
+  .seek_content .work_infomation .work_content .work_flex .work_overview .work_text h2 {
+    font-size: 1.4rem;
+  }
+  .seek_content .work_infomation .work_content .work_flex .work_overview .work_text p {
+    font-size: 1.2rem;
+  }
+  .seek_content .work_infomation .work_content .work_flex .work_thoughts .work_text h2 {
+    font-size: 1.4rem;
+  }
+  .seek_content .work_infomation .work_content .work_flex .work_thoughts .work_text p {
+    font-size: 1.2rem;
+  }
+}

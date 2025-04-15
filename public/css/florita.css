@@ -243,3 +243,38 @@ body {
 .florita_content .work_infomation .work_content .work_flex .work_thoughts .work_text p {
   font-size: 16px;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    height: 230vh;
+  }
+  .florita_content .florita_infomation {
+    margin-left: 10px;
+  }
+  .florita_content .florita_infomation p {
+    font-size: 12px;
+  }
+  .florita_content .florita_infomation h3 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+  }
+  .florita_content .florita_infomation .florita_infomation_flex .florita_infomation_box {
+    width: 380px;
+  }
+  .florita_content .work_infomation .work_content {
+    height: 1000px;
+    margin-top: 300px;
+  }
+  .florita_content .work_infomation .work_content .work_flex .work_overview .work_text h2 {
+    font-size: 1.4rem;
+  }
+  .florita_content .work_infomation .work_content .work_flex .work_overview .work_text p {
+    font-size: 1.2rem;
+  }
+  .florita_content .work_infomation .work_content .work_flex .work_thoughts .work_text h2 {
+    font-size: 1.4rem;
+  }
+  .florita_content .work_infomation .work_content .work_flex .work_thoughts .work_text p {
+    font-size: 1.2rem;
+  }
+}

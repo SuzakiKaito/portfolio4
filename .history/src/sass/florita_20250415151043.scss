@@ -260,7 +260,7 @@ body{
 }
 @media screen and (max-width:500px){
   body{
-    height: 230vh;
+    height: 300vh;
   }
   .florita_content{
     .florita_infomation{
@@ -280,26 +280,12 @@ body{
     }
     .work_infomation{
       .work_content{
-        height: 1000px;
-        margin-top: 300px;
+        height: 1500px;
         .work_flex{
           .work_overview{
             .work_text{
               h2{
-                font-size: 1.4rem;
-              }
-              p{
-                font-size: 1.2rem;
-              }
-            }
-          }
-          .work_thoughts{
-            .work_text{
-              h2{
-                font-size: 1.4rem;
-              }
-              p{
-                font-size: 1.2rem;
+
               }
             }
           }
