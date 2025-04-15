@@ -48,7 +48,7 @@ body{
 }
 .container{
   width: 100%;
-  height: 480vh;
+  min-height: 600vh;
   position: relative;
   background:$bgColor;
   .profileContent{
@@ -156,7 +156,7 @@ body{
         margin: 0 auto 0 15px;
         height: 60px;
         figure{
-          width: clamp(280px, 20vw, 350px);
+          width: clamp(280px, 30vw, 350px);
           height: auto;
           img{
             width: 100%;
@@ -236,11 +236,11 @@ body{
             text-align: center;
             position: relative;
             &::before{
-              content: "Design";
+              content: "Future";
               position: absolute;
-              right:200px;
-              top: -15px;
-              color: #cecece;
+              right: 100px;
+              top: -20px;
+              color: #ddd;
               // opacity: .8;
               z-index: -1;
             }
@@ -263,8 +263,8 @@ body{
               content: "Engineer";
               position: absolute;
               right: 100px;
-              top: -15px;
-              color: #cecece;
+              top: -20px;
+              color: #ddd;
               // opacity: .8;
               z-index: -1;
             }
@@ -302,7 +302,7 @@ body{
     .workContent{
       width: 90%;
       height: 2500px;
-      margin: 100px auto 0;
+      margin: 0 auto;
       h2{
         text-align: center;
         font-size: 48px;
@@ -329,7 +329,7 @@ body{
         }
         .appDetail{
           position: absolute;
-          top: 80px;
+          top: 100px;
           left: 370px;
           width: 100px;
           height: 100px;
@@ -454,7 +454,6 @@ body{
   .container {
     display: flex;
     flex-direction: column; // 上下に並べる
-    height: 4200px;
     .profileContent {
       position: relative; // fixed → relative
       width: 100%;
@@ -475,7 +474,7 @@ body{
     }
     .othersContent {
       width: 100%;  
-      height:3100px; 
+      height: auto; 
       position: relative; 
       top: auto;
       right: auto;
@@ -510,7 +509,7 @@ body{
               font-size: 4rem;
               &::before{
                 position: absolute;
-                right:15px;
+                right:40px;
                 top: -15px;
               }
               }
@@ -542,7 +541,7 @@ body{
         }
       }
       .workContent{
-        height: 1200px;
+        height: 1500px;
         .work{
           width: 100%;
           height: 400px;
@@ -602,32 +601,6 @@ body{
           }
           .bungeeAppName{
             margin-right: 100px;
-          }
-        }
-      }
-      .contactContent{
-        width: 80%;
-        // width: 800px;
-        height: 300px;
-        margin: 500px auto 0;
-        h2{
-          color: #eee;
-          font-size: 48px;
-          text-align: center;
-        }
-        .contact{
-          width: 80%;
-          margin: 80px auto;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          figure{
-            width: 40px;
-            height: auto;
-            img{
-              width: 100%;
-              height: 100%;
-            }
           }
         }
       }

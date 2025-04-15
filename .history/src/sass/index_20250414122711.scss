@@ -156,7 +156,7 @@ body{
         margin: 0 auto 0 15px;
         height: 60px;
         figure{
-          width: clamp(280px, 20vw, 350px);
+          width: clamp(280px, 30vw, 350px);
           height: auto;
           img{
             width: 100%;
@@ -239,8 +239,8 @@ body{
               content: "Design";
               position: absolute;
               right:200px;
-              top: -15px;
-              color: #cecece;
+              top: -20px;
+              color: #ddd;
               // opacity: .8;
               z-index: -1;
             }
@@ -263,8 +263,8 @@ body{
               content: "Engineer";
               position: absolute;
               right: 100px;
-              top: -15px;
-              color: #cecece;
+              top: -20px;
+              color: #ddd;
               // opacity: .8;
               z-index: -1;
             }
@@ -510,7 +510,7 @@ body{
               font-size: 4rem;
               &::before{
                 position: absolute;
-                right:15px;
+                right:20px;
                 top: -15px;
               }
               }

@@ -48,7 +48,7 @@ body{
 }
 .container{
   width: 100%;
-  height: 480vh;
+  min-height: 480vh;
   position: relative;
   background:$bgColor;
   .profileContent{
@@ -156,7 +156,7 @@ body{
         margin: 0 auto 0 15px;
         height: 60px;
         figure{
-          width: clamp(280px, 20vw, 350px);
+          width: clamp(280px, 30vw, 350px);
           height: auto;
           img{
             width: 100%;
@@ -236,11 +236,11 @@ body{
             text-align: center;
             position: relative;
             &::before{
-              content: "Design";
+              content: "Future";
               position: absolute;
-              right:200px;
-              top: -15px;
-              color: #cecece;
+              right: 100px;
+              top: -20px;
+              color: #ddd;
               // opacity: .8;
               z-index: -1;
             }
@@ -263,8 +263,8 @@ body{
               content: "Engineer";
               position: absolute;
               right: 100px;
-              top: -15px;
-              color: #cecece;
+              top: -20px;
+              color: #ddd;
               // opacity: .8;
               z-index: -1;
             }
@@ -302,7 +302,7 @@ body{
     .workContent{
       width: 90%;
       height: 2500px;
-      margin: 100px auto 0;
+      margin: 0 auto;
       h2{
         text-align: center;
         font-size: 48px;
@@ -454,7 +454,7 @@ body{
   .container {
     display: flex;
     flex-direction: column; // 上下に並べる
-    height: 4200px;
+    height: 3200px;
     .profileContent {
       position: relative; // fixed → relative
       width: 100%;
@@ -510,7 +510,7 @@ body{
               font-size: 4rem;
               &::before{
                 position: absolute;
-                right:15px;
+                right:40px;
                 top: -15px;
               }
               }

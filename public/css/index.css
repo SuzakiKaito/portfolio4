@@ -47,12 +47,12 @@ body {
 
 .container {
   width: 100%;
-  min-height: 480vh;
+  height: 480vh;
   position: relative;
   background: #92D8AE;
 }
 .container .profileContent {
-  width: 35%;
+  width: clamp(500px, 35vw, 600px);
   height: 100vh;
   position: fixed;
   left: 0;
@@ -105,24 +105,27 @@ body {
   margin-top: 20px;
 }
 .container .profileContent .profile .faceContent {
-  width: 150px;
-  height: 150px;
-  background: #ddd;
+  width: clamp(100px, 30vw, 150px);
+  margin: 0 auto;
 }
 .container .profileContent .profile .faceContent img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
 }
 .container .profileContent .profile .nameProfile {
-  padding-right: 60px;
+  width: 240px;
+}
+.container .profileContent .profile .nameProfile h4, .container .profileContent .profile .nameProfile p {
+  margin-left: 20px;
 }
 .container .profileContent .profile .nameProfile h4 {
-  font-size: 1.8em;
-  margin-bottom: 40px;
+  font-size: 2.5em;
+  margin-bottom: 15px;
   font-weight: 500;
 }
 .container .profileContent .profile .nameProfile p {
-  font-size: 1.5rem;
+  font-size: clamp(15px, 2vw, 15px);
   margin-bottom: 5px;
 }
 .container .profileContent .introduction {
@@ -136,7 +139,7 @@ body {
 .container .profileContent .introduction p {
   width: 90%;
   margin: 10px auto;
-  font-size: 1.6rem;
+  font-size: clamp(15px, 2vw, 15px);
 }
 .container .profileContent .introduction .hobby {
   margin: 20px auto 5px;
@@ -148,6 +151,15 @@ body {
   width: 90%;
   margin: 0 auto 0 15px;
   height: 60px;
+}
+.container .profileContent .introduction .skillContent figure {
+  width: clamp(280px, 20vw, 350px);
+  height: auto;
+}
+.container .profileContent .introduction .skillContent figure img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .container .profileContent .menu {
   width: 85%;
@@ -218,11 +230,11 @@ body {
   position: relative;
 }
 .container .othersContent .circleContent .vision .futureVision h2::before {
-  content: "Future";
+  content: "Design";
   position: absolute;
-  right: 100px;
-  top: -20px;
-  color: #ddd;
+  right: 200px;
+  top: -15px;
+  color: #cecece;
   z-index: -1;
 }
 .container .othersContent .circleContent .vision .futureVision p {
@@ -244,8 +256,8 @@ body {
   content: "Engineer";
   position: absolute;
   right: 100px;
-  top: -20px;
-  color: #ddd;
+  top: -15px;
+  color: #cecece;
   z-index: -1;
 }
 .container .othersContent .circleContent .vision .engineerVision p {
@@ -278,7 +290,7 @@ body {
 .container .othersContent .workContent {
   width: 90%;
   height: 2500px;
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 .container .othersContent .workContent h2 {
   text-align: center;
@@ -288,7 +300,7 @@ body {
 }
 .container .othersContent .workContent .work {
   width: 100%;
-  height: 600px;
+  height: 700px;
   margin: 80px auto 30px;
   display: flex;
   align-items: center;
@@ -307,7 +319,7 @@ body {
 }
 .container .othersContent .workContent .work .appDetail {
   position: absolute;
-  top: 50px;
+  top: 80px;
   left: 370px;
   width: 100px;
   height: 100px;
@@ -321,20 +333,6 @@ body {
   animation-duration: 2s;
   animation-fill-mode: both;
   opacity: 1; /* フェードインが終わった後に完全に表示 */
-}
-.container .othersContent .workContent .work .appDetail h3 {
-  width: 100%;
-  height: 100%;
-}
-.container .othersContent .workContent .work .appDetail h3 a {
-  width: 100%;
-  height: 100%;
-  display: block;
-  color: #111;
-  text-decoration: none;
-  text-align: center;
-  line-height: 100px;
-  font-size: 2rem;
 }
 .container .othersContent .workContent .work .appName {
   width: 400px;
@@ -363,6 +361,18 @@ body {
   color: #111;
   padding: 10px 0 0 70px;
   font-size: 4.8rem;
+}
+.container .othersContent .workContent .work .appName p a {
+  display: block;
+  color: #111;
+  text-decoration: underline;
+  padding-left: 70px;
+  font-size: 2rem;
+  transition: ease-in-out 0.3s;
+}
+.container .othersContent .workContent .work .appName p :hover {
+  letter-spacing: 5px;
+  color: #f55454;
 }
 .container .othersContent .workContent .work .bungeeAppName {
   margin-right: 100px;
@@ -421,5 +431,175 @@ body {
   }
   40% {
     transform: translate(0);
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 4200px;
+  }
+  .container .profileContent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+  }
+  .container .profileContent .profile .nameProfile p {
+    font-size: 15px;
+  }
+  .container .profileContent .introduction p {
+    font-size: 15px;
+  }
+  .container .othersContent {
+    width: 100%;
+    height: 3100px;
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: 0;
+  }
+  .container .othersContent .circleContent {
+    width: 1000px;
+    height: 1000px;
+    margin-left: -100px;
+  }
+  .container .othersContent .circleContent .vision {
+    width: 400px;
+    height: 700px;
+    margin-top: 180px;
+  }
+  .container .othersContent .circleContent .vision .futureVision h2 {
+    color: #00430F;
+    font-size: 4rem;
+  }
+  .container .othersContent .circleContent .vision .futureVision h2::before {
+    position: absolute;
+    right: 60px;
+    top: -15px;
+  }
+  .container .othersContent .circleContent .vision .futureVision p {
+    font-size: 2rem;
+  }
+  .container .othersContent .circleContent .vision .engineerVision {
+    margin-top: 100px;
+  }
+  .container .othersContent .circleContent .vision .engineerVision h2 {
+    font-size: 4rem;
+  }
+  .container .othersContent .circleContent .vision .engineerVision h2::before {
+    position: absolute;
+    right: 15px;
+    top: -15px;
+  }
+  .container .othersContent .circleContent .vision .engineerVision p {
+    font-size: 2rem;
+  }
+  .container .othersContent .circleContent .vision .scroll {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin-top: 100px;
+    position: relative;
+    animation: down 1.5s infinite;
+    -webkit-animation: down 1.5s infinite;
+  }
+  .container .othersContent .circleContent .vision .scroll::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    width: 18px;
+    height: 18px;
+    border-left: 2px solid #333;
+    border-bottom: 2px solid #333;
+    transform: rotate(-45deg);
+  }
+  .container .othersContent .workContent {
+    height: 1200px;
+  }
+  .container .othersContent .workContent .work {
+    width: 100%;
+    height: 400px;
+    margin: 80px auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .container .othersContent .workContent .work figure {
+    width: 200px;
+    height: auto;
+  }
+  .container .othersContent .workContent .work figure img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .othersContent .workContent .work .appDetail {
+    top: 80px;
+    left: 160px;
+    width: 50px;
+    height: 50px;
+    background: #eee;
+    border-radius: 50%;
+    opacity: 0; /* 初期状態では非表示に */
+    transition: opacity 1s; /* スムーズなフェードインのため */
+  }
+  .container .othersContent .workContent .work .appName {
+    width: 250px;
+    height: 250px;
+    background: #eee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    opacity: 0; /* 初期状態では非表示に */
+    transition: opacity 1s; /* スムーズなフェードインのため */
+  }
+  .container .othersContent .workContent .work .appName h4 {
+    text-align: left;
+    color: #111;
+    font-size: 1.6rem;
+    padding-left: 40px;
+  }
+  .container .othersContent .workContent .work .appName h3 {
+    color: #111;
+    padding: 10px 0 0 40px;
+    font-size: 3rem;
+  }
+  .container .othersContent .workContent .work .appName p a {
+    padding-left: 40px;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    color: #f55454;
+  }
+  .container .othersContent .workContent .work .bungeeAppName {
+    margin-right: 100px;
+  }
+  .container .othersContent .contactContent {
+    width: 80%;
+    height: 300px;
+    margin: 500px auto 0;
+  }
+  .container .othersContent .contactContent h2 {
+    color: #eee;
+    font-size: 48px;
+    text-align: center;
+  }
+  .container .othersContent .contactContent .contact {
+    width: 80%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container .othersContent .contactContent .contact figure {
+    width: 40px;
+    height: auto;
+  }
+  .container .othersContent .contactContent .contact figure img {
+    width: 100%;
+    height: 100%;
   }
 }

@@ -48,11 +48,11 @@ body{
 }
 .container{
   width: 100%;
-  height: 480vh;
+  min-height: 480vh;
   position: relative;
   background:$bgColor;
   .profileContent{
-    width: clamp(500px, 35vw, 600px);
+    width: clamp(300px, 35vw, 600px);
     height: 100vh;
     position: fixed;
     left: 0;
@@ -115,18 +115,14 @@ body{
         }
       }
       .nameProfile{
-        width: 240px;
-        // padding-right: 60px;
-        h4,p{
-          margin-left:20px ;
-        }
+        padding-right: 60px;
         h4{
-          font-size: 2.5em;
-          margin-bottom: 15px;
+          font-size: 1.8em;
+          margin-bottom: 40px;
           font-weight: 500;
         }
         p{
-          font-size: clamp(15px, 2vw, 15px);
+          font-size: clamp(12px, 2vw, 15px);
           margin-bottom: 5px;
         }
       }
@@ -142,7 +138,7 @@ body{
       p{
         width: 90%;
         margin: 10px auto;
-        font-size: clamp(15px, 2vw, 15px);
+        font-size: clamp(12px, 2vw, 15px);
         // margin: 10px;
       }
       .hobby{
@@ -156,7 +152,7 @@ body{
         margin: 0 auto 0 15px;
         height: 60px;
         figure{
-          width: clamp(280px, 20vw, 350px);
+          width: clamp(100px, 30vw, 350px);
           height: auto;
           img{
             width: 100%;
@@ -236,11 +232,11 @@ body{
             text-align: center;
             position: relative;
             &::before{
-              content: "Design";
+              content: "Future";
               position: absolute;
-              right:200px;
-              top: -15px;
-              color: #cecece;
+              right: 100px;
+              top: -20px;
+              color: #ddd;
               // opacity: .8;
               z-index: -1;
             }
@@ -263,8 +259,8 @@ body{
               content: "Engineer";
               position: absolute;
               right: 100px;
-              top: -15px;
-              color: #cecece;
+              top: -20px;
+              color: #ddd;
               // opacity: .8;
               z-index: -1;
             }
@@ -302,7 +298,7 @@ body{
     .workContent{
       width: 90%;
       height: 2500px;
-      margin: 100px auto 0;
+      margin: 0 auto;
       h2{
         text-align: center;
         font-size: 48px;
@@ -329,7 +325,7 @@ body{
         }
         .appDetail{
           position: absolute;
-          top: 80px;
+          top: 50px;
           left: 370px;
           width: 100px;
           height: 100px;
@@ -342,6 +338,20 @@ body{
             animation-duration: 2s;
             animation-fill-mode: both;
             opacity: 1; /* フェードインが終わった後に完全に表示 */
+          }
+          h3{
+            width: 100%;
+            height: 100%;
+            a{
+              width: 100%;
+              height: 100%;
+              display: block;
+              color: #111;
+              text-decoration: none;
+              text-align: center;
+              line-height: 100px;
+              font-size: 2rem;
+            }
           }
         }
         .appName{
@@ -370,21 +380,6 @@ body{
             color: #111;
             padding: 10px 0 0 70px;
             font-size: 4.8rem;
-          }
-          p{
-            a{
-              display: block;
-              color: #111;
-              text-decoration: underline;
-              padding-left: 70px;
-              font-size: 2rem;
-              transition: ease-in-out .3s;
-            }
-            :hover{
-              letter-spacing: 5px;
-              // color: ;
-              color: #f55454 ;
-            }
           }
         }
         .bungeeAppName{
@@ -451,184 +446,23 @@ body{
   }
 }
 @media screen and (max-width: 500px) {
-  .container {
-    display: flex;
-    flex-direction: column; // 上下に並べる
-    height: 4200px;
-    .profileContent {
-      position: relative; // fixed → relative
-      width: 100%;
+  .container{
+    .profileContent{
+      width: 100% !important;
       height: 100vh;
-      z-index: 0;
-      .profile {
-        .nameProfile {
-          p {
+      // background: #000;
+      position: absolute;
+      z-index: 1;
+      .profile{
+        .nameProfile{
+          p{
             font-size: 15px;
           }
         }
       }
-      .introduction {
-        p {
+      .introduction{
+        p{
           font-size: 15px;
-        }
-      }
-    }
-    .othersContent {
-      width: 100%;  
-      height:3100px; 
-      position: relative; 
-      top: auto;
-      right: auto;
-      z-index: 0;
-      .circleContent{
-        width: 1000px;
-        height: 1000px;
-        margin-left:-100px ;
-        // margin:100px auto 0 auto;
-        .vision{
-          width: 400px;
-          height: 700px;
-          // background: #ddd;
-          margin-top:180px;
-          .futureVision{
-            h2{
-              color:$textColor;
-              font-size: 4rem;
-              &::before{
-                position: absolute;
-                right: 60px;
-                top: -15px;
-              }
-            }
-            p{
-              font-size: 2rem;
-            }
-          }
-          .engineerVision{
-            margin-top: 100px;
-            h2{
-              font-size: 4rem;
-              &::before{
-                position: absolute;
-                right:15px;
-                top: -15px;
-              }
-              }
-            p{
-              font-size: 2rem;
-            }
-          }
-          .scroll{
-            width: 60px;
-            height: 60px;
-            border: 2px solid #333;
-            border-radius: 50%;
-            margin-top: 100px;
-            position: relative;
-            animation: down 1.5s infinite;
-            -webkit-animation: down 1.5s infinite;
-            &::before {
-              content: '';
-              position: absolute;
-              top: 15px;
-              left: 18px;
-              width: 18px;
-              height: 18px;
-              border-left: 2px solid #333;
-              border-bottom: 2px solid #333;
-              transform: rotate(-45deg);
-            }
-          }
-        }
-      }
-      .workContent{
-        height: 1200px;
-        .work{
-          width: 100%;
-          height: 400px;
-          margin: 80px auto 30px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          figure{
-            width: 200px;
-            height: auto;
-            img{
-              width: 100%;
-              height: 100%;
-            }
-          }
-          .appDetail{
-            top: 80px;
-            left: 160px;
-            width: 50px;
-            height: 50px;
-            background: #eee;
-            border-radius: 50%;
-            opacity: 0; /* 初期状態では非表示に */
-            transition: opacity 1s; /* スムーズなフェードインのため */
-            
-          }
-          .appName{
-            width: 250px;
-            height: 250px;
-            background: #eee;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            flex-flow: column;
-            opacity: 0; /* 初期状態では非表示に */
-            transition: opacity 1s; /* スムーズなフェードインのため */
-            h4{
-              text-align: left;
-              color: #111;
-              font-size: 1.6rem;
-              padding-left: 40px;
-            }
-            h3{
-              color: #111;
-              padding: 10px 0 0 40px;
-              font-size: 3rem;
-            }
-            p{
-              a{
-                padding-left: 40px;
-                font-size: 1.4rem;
-                text-decoration: underline;
-                color:#f55454;
-              }
-            }
-          }
-          .bungeeAppName{
-            margin-right: 100px;
-          }
-        }
-      }
-      .contactContent{
-        width: 80%;
-        // width: 800px;
-        height: 300px;
-        margin: 500px auto 0;
-        h2{
-          color: #eee;
-          font-size: 48px;
-          text-align: center;
-        }
-        .contact{
-          width: 80%;
-          margin: 80px auto;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          figure{
-            width: 40px;
-            height: auto;
-            img{
-              width: 100%;
-              height: 100%;
-            }
-          }
         }
       }
     }
