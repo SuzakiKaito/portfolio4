@@ -52,7 +52,7 @@ body{
   position: relative;
   background:$bgColor;
   .profileContent{
-    width: clamp(500px, 35vw, 600px);
+    width: clamp(500px, 35vw, 200px);
     height: 100vh;
     position: fixed;
     left: 0;
@@ -133,7 +133,7 @@ body{
     }
     .introduction{
       width: 85%;
-      height: 500px;
+      height: 480px;
       // background: #111;
       border: 1px solid #111;
       .birth{
