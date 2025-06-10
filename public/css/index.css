@@ -1,605 +1,162 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap");
 html {
   font-size: 62.5%;
 }
 
 body {
-  width: 100%;
-}
-
-.mouse-stalker {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: #00430F;
-  opacity: 0.6;
-  border-radius: 50%;
-  transform: translate(50%, 50%);
-  transition: transform 0s ease-in-out;
-  z-index: 999;
-}
-
-.meter_content {
-  position: relative;
-  width: 65%;
-}
-.meter_content .meter {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 65%;
-  height: 15px;
-  z-index: 992;
-  background-color: #ddd;
-  animation: meter linear;
-  animation-timeline: scroll();
-}
-@keyframes meter {
-  0% {
-    background-color: #00430F;
-    width: 0;
-  }
-  100% {
-    background-color: #00430F;
-    width: 100%;
-  }
+  font-family: "Outfit", sans-serif;
 }
 
 .container {
   width: 100%;
-  height: 480vh;
+  height: 100vh;
   position: relative;
-  background: #92D8AE;
 }
-.container .profileContent {
-  width: clamp(500px, 35vw, 600px);
+
+.profileContent {
+  width: clamp(500px, 50vw, 50%);
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 990;
-  background: #F2FFF4;
-  border: 1px solid #111;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: center;
+  background-color: #227a6b;
+  border: 0.5px solid #111;
   overflow: hidden;
-}
-.container .profileContent .bgContent {
-  position: absolute;
-  bottom: 100px;
-  left: 300px;
-  z-index: -1;
-  width: 35vh;
-  height: 30vh;
-  background: #a6e9a1;
-  animation: bgRotate 22s ease 0s infinite;
-}
-.container .profileContent .bgContent2 {
-  position: absolute;
-  top: 100px;
-  right: 300px;
-  z-index: -1;
-  width: 30vh;
-  height: 30vh;
-  background: #a6e9a1;
-  animation: bgRotate 9s ease 0s infinite;
-}
-.container .profileContent .bgContent3 {
-  position: absolute;
-  top: 100px;
-  right: 100px;
-  z-index: -1;
-  width: 6vh;
-  height: 6vh;
-  background: #a6e9a1;
-  animation: bgRotate 27s ease 0s infinite;
-}
-.container .profileContent .profile {
-  width: 85%;
-  height: 200px;
   display: flex;
-  justify-content: space-around;
+  transition: transform 0.6s ease-in-out;
+  transform: translateX(0);
+}
+.profileContent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/stone.jpg") repeat;
+  background-size: cover;
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.profileContent .menu {
+  width: 50px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  flex-direction: column;
 }
-.container .profileContent .profile .faceContent {
-  width: clamp(100px, 30vw, 150px);
-  margin: 0 auto;
-}
-.container .profileContent .profile .faceContent img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.container .profileContent .profile .nameProfile {
-  width: 240px;
-}
-.container .profileContent .profile .nameProfile h4, .container .profileContent .profile .nameProfile p {
-  margin-left: 20px;
-}
-.container .profileContent .profile .nameProfile h4 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-.container .profileContent .profile .nameProfile p {
-  font-size: clamp(15px, 2vw, 15px);
-  margin-bottom: 5px;
-}
-.container .profileContent .introduction {
-  width: 85%;
-  height: 500px;
-  border: 1px solid #111;
-}
-.container .profileContent .introduction .birth {
-  margin-bottom: 30px;
-}
-.container .profileContent .introduction p {
-  width: 90%;
-  margin: 10px auto;
-  font-size: clamp(15px, 2vw, 15px);
-}
-.container .profileContent .introduction .hobby {
-  margin: 20px auto 5px;
-}
-.container .profileContent .introduction .goal {
-  margin: 0 auto 20px;
-}
-.container .profileContent .introduction .skillContent {
-  width: 90%;
-  margin: 0 auto 0 15px;
-  height: 60px;
-}
-.container .profileContent .introduction .skillContent figure {
-  width: clamp(280px, 20vw, 350px);
-  height: auto;
-}
-.container .profileContent .introduction .skillContent figure img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.container .profileContent .menu {
-  width: 85%;
-  height: 60px;
-}
-.container .profileContent .menu ul {
-  width: 100%;
+.profileContent .menu ul {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
   display: flex;
-  justify-content: space-between;
+  gap: 5rem;
 }
-.container .profileContent .menu ul li {
-  width: 33%;
+.profileContent .menu ul li {
+  height: 80px;
   list-style: none;
 }
-.container .profileContent .menu ul li a {
+.profileContent .menu ul li a {
+  font-size: 2rem;
+  font-weight: 100;
+  color: #eeeeee;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.profileContent .menu ul li a:hover {
+  color: white;
+  letter-spacing: 0.5rem;
+}
+.profileContent .content {
+  flex: 1;
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profileContent .content .face {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #F2FFF4;
+}
+.profileContent .content .face img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+.profileContent .content h2 {
+  margin-top: 2rem;
+  font-size: 3.2rem;
+  color: #eeeeee;
+  font-weight: 500;
+}
+.profileContent .content .career {
+  font-size: 1.4rem;
+  color: #eeeeee;
+  margin-top: 7rem;
+  max-width: 80%;
+  list-style: none;
+  text-align: left;
+}
+.profileContent .content .career li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+.profileContent .content .career li strong {
+  font-weight: 600;
+  display: inline-block;
+  width: 4.5em;
+}
+.profileContent .content .link {
+  margin-top: auto;
+  display: flex;
+  gap: 5rem;
+}
+.profileContent .content .link figure {
+  width: 30px;
+  height: 30px;
+}
+.profileContent .content .link figure a {
   display: block;
-  text-decoration: none;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-  font-size: 2rem;
-  font-weight: bold;
-  transition: ease-in-out 0.3s;
+  width: 100%;
+  height: 100%;
 }
-.container .profileContent .menu ul li a:hover {
-  color: #00430F;
-  letter-spacing: 2px;
+.profileContent .content .link figure a img {
+  width: 100%;
+  height: 100%;
 }
-.container .othersContent {
-  width: 65%;
-  height: 480vh;
+
+.workContent {
+  width: 50%;
+  height: 100vh;
+  background: tomato;
   position: absolute;
   top: 0;
   right: 0;
   overflow: hidden;
 }
-.container .othersContent .circleContent {
-  width: 1500px;
-  height: 1200px;
-  margin: 100px auto 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-15%, 0%);
-  -ms-transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: #F2FFF4;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-flow: column;
-}
-.container .othersContent .circleContent .vision {
-  width: 700px;
-  height: 700px;
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: column;
-  position: relative;
-}
-.container .othersContent .circleContent .vision .futureVision h2 {
-  color: #00430F;
-  font-size: 4rem;
-  text-align: center;
-  position: relative;
-}
-.container .othersContent .circleContent .vision .futureVision h2::before {
-  content: "Design";
-  position: absolute;
-  right: 200px;
-  top: -15px;
-  color: #cecece;
-  z-index: -1;
-}
-.container .othersContent .circleContent .vision .futureVision p {
-  font-size: 2.8rem;
-  text-align: center;
-  margin-top: 10px;
-  font-weight: 350;
-}
-.container .othersContent .circleContent .vision .engineerVision {
-  margin-top: 100px;
-}
-.container .othersContent .circleContent .vision .engineerVision h2 {
-  color: #00430F;
-  font-size: 4rem;
-  text-align: center;
-  position: relative;
-}
-.container .othersContent .circleContent .vision .engineerVision h2::before {
-  content: "Engineer";
-  position: absolute;
-  right: 100px;
-  top: -15px;
-  color: #cecece;
-  z-index: -1;
-}
-.container .othersContent .circleContent .vision .engineerVision p {
-  font-size: 2.8rem;
-  text-align: center;
-  margin-top: 10px;
-  font-weight: 350;
-}
-.container .othersContent .circleContent .vision .scroll {
-  width: 60px;
-  height: 60px;
-  border: 2px solid #333;
-  border-radius: 50%;
-  margin-top: 100px;
-  position: relative;
-  animation: down 1.5s infinite;
-  -webkit-animation: down 1.5s infinite;
-}
-.container .othersContent .circleContent .vision .scroll::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 18px;
-  width: 18px;
-  height: 18px;
-  border-left: 2px solid #333;
-  border-bottom: 2px solid #333;
-  transform: rotate(-45deg);
-}
-.container .othersContent .workContent {
-  width: 90%;
-  height: 2500px;
-  margin: 100px auto 0;
-}
-.container .othersContent .workContent h2 {
-  text-align: center;
-  font-size: 48px;
-  margin-top: 50px;
-  color: #eee;
-}
-.container .othersContent .workContent .work {
+.workContent .opus {
   width: 100%;
-  height: 700px;
-  margin: 80px auto 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 50vh;
+  background: #F2FFF4;
   position: relative;
+  overflow: hidden;
 }
-.container .othersContent .workContent .work figure {
-  opacity: 0; /* 初期状態では非表示に */
-  transition: opacity 1s; /* スムーズなフェードインのため */
+.workContent .opus img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
 }
-.container .othersContent .workContent .work figure.in-view {
-  animation-name: fadeIn;
-  animation-duration: 2s;
-  animation-fill-mode: both;
-  opacity: 1; /* フェードインが終わった後に完全に表示 */
-}
-.container .othersContent .workContent .work .appDetail {
+.workContent .opus p {
   position: absolute;
-  top: 80px;
-  left: 370px;
-  width: 100px;
-  height: 100px;
-  background: #eee;
-  border-radius: 50%;
-  opacity: 0; /* 初期状態では非表示に */
-  transition: opacity 1s; /* スムーズなフェードインのため */
+  bottom: 2%;
+  right: 2%;
+  border-radius: 4px;
 }
-.container .othersContent .workContent .work .appDetail.in-view {
-  animation-name: fadeIn;
-  animation-duration: 2s;
-  animation-fill-mode: both;
-  opacity: 1; /* フェードインが終わった後に完全に表示 */
+.workContent .opus p span {
+  color: #F2FFF4;
 }
-.container .othersContent .workContent .work .appName {
-  width: 400px;
-  height: 400px;
-  background: #eee;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  opacity: 0; /* 初期状態では非表示に */
-  transition: opacity 1s; /* スムーズなフェードインのため */
-}
-.container .othersContent .workContent .work .appName.in-view {
-  animation-name: fadeIn;
-  animation-duration: 2s;
-  animation-fill-mode: both;
-  opacity: 1; /* フェードインが終わった後に完全に表示 */
-}
-.container .othersContent .workContent .work .appName h4 {
-  text-align: left;
-  color: #111;
-  font-size: 1.6rem;
-  padding-left: 70px;
-}
-.container .othersContent .workContent .work .appName h3 {
-  color: #111;
-  padding: 10px 0 0 70px;
-  font-size: 4.8rem;
-}
-.container .othersContent .workContent .work .appName p a {
-  display: block;
-  color: #111;
-  text-decoration: underline;
-  padding-left: 70px;
-  font-size: 2rem;
-  transition: ease-in-out 0.3s;
-}
-.container .othersContent .workContent .work .appName p :hover {
-  letter-spacing: 5px;
-  color: #f55454;
-}
-.container .othersContent .workContent .work .bungeeAppName {
-  margin-right: 100px;
-}
-.container .othersContent .contactContent {
-  width: 80%;
-  height: 300px;
-  margin: 50px auto 0;
-}
-.container .othersContent .contactContent h2 {
-  color: #eee;
-  font-size: 48px;
-  text-align: center;
-}
-.container .othersContent .contactContent .contact {
-  width: 80%;
-  margin: 80px auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-@keyframes bgRotate {
-  0%, 100% {
-    border-radius: 63% 27% 54% 46%/55% 48% 52% 45%;
-  }
-  14% {
-    border-radius: 50% 48% 54% 46%/49% 60% 40% 51%;
-  }
-  42% {
-    border-radius: 61% 39% 55% 45%/61% 38% 62% 19%;
-  }
-  56% {
-    border-radius: 51% 39% 67% 33%/70% 50% 45% 30%;
-  }
-  84% {
-    border-radius: 46% 84% 50% 50%/35% 61% 39% 65%;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes down {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translateY(15px);
-  }
-  40% {
-    transform: translate(0);
-  }
-}
-@media screen and (max-width: 500px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 4200px;
-  }
-  .container .profileContent {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    z-index: 0;
-  }
-  .container .profileContent .profile .nameProfile p {
-    font-size: 15px;
-  }
-  .container .profileContent .introduction p {
-    font-size: 15px;
-  }
-  .container .othersContent {
-    width: 100%;
-    height: 3100px;
-    position: relative;
-    top: auto;
-    right: auto;
-    z-index: 0;
-  }
-  .container .othersContent .circleContent {
-    width: 1000px;
-    height: 1000px;
-    margin-left: -100px;
-  }
-  .container .othersContent .circleContent .vision {
-    width: 400px;
-    height: 700px;
-    margin-top: 180px;
-  }
-  .container .othersContent .circleContent .vision .futureVision h2 {
-    color: #00430F;
-    font-size: 4rem;
-  }
-  .container .othersContent .circleContent .vision .futureVision h2::before {
-    position: absolute;
-    right: 60px;
-    top: -15px;
-  }
-  .container .othersContent .circleContent .vision .futureVision p {
-    font-size: 2rem;
-  }
-  .container .othersContent .circleContent .vision .engineerVision {
-    margin-top: 100px;
-  }
-  .container .othersContent .circleContent .vision .engineerVision h2 {
-    font-size: 4rem;
-  }
-  .container .othersContent .circleContent .vision .engineerVision h2::before {
-    position: absolute;
-    right: 15px;
-    top: -15px;
-  }
-  .container .othersContent .circleContent .vision .engineerVision p {
-    font-size: 2rem;
-  }
-  .container .othersContent .circleContent .vision .scroll {
-    width: 60px;
-    height: 60px;
-    border: 2px solid #333;
-    border-radius: 50%;
-    margin-top: 100px;
-    position: relative;
-    animation: down 1.5s infinite;
-    -webkit-animation: down 1.5s infinite;
-  }
-  .container .othersContent .circleContent .vision .scroll::before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 18px;
-    width: 18px;
-    height: 18px;
-    border-left: 2px solid #333;
-    border-bottom: 2px solid #333;
-    transform: rotate(-45deg);
-  }
-  .container .othersContent .workContent {
-    height: 1200px;
-  }
-  .container .othersContent .workContent .work {
-    width: 100%;
-    height: 400px;
-    margin: 80px auto 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  .container .othersContent .workContent .work figure {
-    width: 200px;
-    height: auto;
-  }
-  .container .othersContent .workContent .work figure img {
-    width: 100%;
-    height: 100%;
-  }
-  .container .othersContent .workContent .work .appDetail {
-    top: 80px;
-    left: 160px;
-    width: 50px;
-    height: 50px;
-    background: #eee;
-    border-radius: 50%;
-    opacity: 0; /* 初期状態では非表示に */
-    transition: opacity 1s; /* スムーズなフェードインのため */
-  }
-  .container .othersContent .workContent .work .appName {
-    width: 250px;
-    height: 250px;
-    background: #eee;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    opacity: 0; /* 初期状態では非表示に */
-    transition: opacity 1s; /* スムーズなフェードインのため */
-  }
-  .container .othersContent .workContent .work .appName h4 {
-    text-align: left;
-    color: #111;
-    font-size: 1.6rem;
-    padding-left: 40px;
-  }
-  .container .othersContent .workContent .work .appName h3 {
-    color: #111;
-    padding: 10px 0 0 40px;
-    font-size: 3rem;
-  }
-  .container .othersContent .workContent .work .appName p a {
-    padding-left: 40px;
-    font-size: 1.4rem;
-    text-decoration: underline;
-    color: #f55454;
-  }
-  .container .othersContent .workContent .work .bungeeAppName {
-    margin-right: 100px;
-  }
-  .container .othersContent .contactContent {
-    width: 80%;
-    height: 300px;
-    margin: 500px auto 0;
-  }
-  .container .othersContent .contactContent h2 {
-    color: #eee;
-    font-size: 48px;
-    text-align: center;
-  }
-  .container .othersContent .contactContent .contact {
-    width: 80%;
-    margin: 80px auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .container .othersContent .contactContent .contact figure {
-    width: 40px;
-    height: auto;
-  }
-  .container .othersContent .contactContent .contact figure img {
-    width: 100%;
-    height: 100%;
-  }
+.workContent .opus:hover img {
+  transform: scale(1.05);
 }
