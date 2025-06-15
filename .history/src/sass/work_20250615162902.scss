@@ -53,7 +53,6 @@ body {
   padding: 2rem;
   background: $bgColor;
   width: calc(100% - 50px);
-  height: 495vh;
 }
 
 .workContent {
@@ -75,14 +74,9 @@ body {
         border-radius: 20px;
       }
     }
-    .candleContent{
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      .candle{
-        height: 480px;
-        width: 250px;
-      }
+    .candle{
+      height: 500px;
+      width: 250px;
     }
     .explain{
       width: 45%;
@@ -109,7 +103,6 @@ body {
         color: $textColor;
         border-bottom:3px $baseColor dotted;
         text-decoration: none;
-        margin-bottom: 20px;
       }
     }
   }

@@ -53,7 +53,6 @@ body {
   padding: 2rem;
   background: $bgColor;
   width: calc(100% - 50px);
-  height: 495vh;
 }
 
 .workContent {
@@ -75,14 +74,9 @@ body {
         border-radius: 20px;
       }
     }
-    .candleContent{
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      .candle{
-        height: 480px;
-        width: 250px;
-      }
+    .candle{
+      height: 300px;
+      width: 100px;
     }
     .explain{
       width: 45%;
@@ -94,22 +88,21 @@ body {
         display: flex;
         justify-content: space-between;
         h2{
-          font-size: 1.6rem;
+          font-size: 2.4rem;
           width: 20%;
         }
         h3{
           width: 75%;
           font-size: 1.6rem;
-          // line-height:40px;
         }
       }
       a{
-        font-size: 1.6rem;
+        font-size: 2rem;
         text-align: right;
         color: $textColor;
         border-bottom:3px $baseColor dotted;
         text-decoration: none;
-        margin-bottom: 20px;
+
       }
     }
   }

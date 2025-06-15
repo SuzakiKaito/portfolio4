@@ -47,6 +47,7 @@ body {
   padding: 2rem;
   background: #227a6b;
   width: calc(100% - 50px);
+  height: 495vh;
 }
 
 .workContent {
@@ -70,6 +71,15 @@ body {
   height: 100%;
   border-radius: 20px;
 }
+.workContent .work .candleContent {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.workContent .work .candleContent .candle {
+  height: 480px;
+  width: 250px;
+}
 .workContent .work .explain {
   width: 45%;
   display: flex;
@@ -82,7 +92,7 @@ body {
   justify-content: space-between;
 }
 .workContent .work .explain .flex h2 {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   width: 20%;
 }
 .workContent .work .explain .flex h3 {
@@ -90,9 +100,10 @@ body {
   font-size: 1.6rem;
 }
 .workContent .work .explain a {
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: right;
   color: #eee;
   border-bottom: 3px #F2FFF4 dotted;
   text-decoration: none;
+  margin-bottom: 20px;
 }
