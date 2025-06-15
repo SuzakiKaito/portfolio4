@@ -1,0 +1,49 @@
+$bgColor:#227a6b;
+$baseColor:#F2FFF4;
+$textColor:#eeeeee;
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Outfit", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 430vh;
+  position: relative;
+  background: $bgColor;
+}
+.menu {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  ul {
+    writing-mode: vertical-rl;
+    display: flex;
+    gap: 5rem;
+    li {
+      height: 80px;
+      list-style: none;
+      a {
+        font-size: 2rem;
+        font-weight: 100;
+        color: $textColor;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: lighten($textColor, 20%);
+          letter-spacing: 0.5rem;
+        }
+      }
+    }
+  }
+}
+.workContent{
+  width: 100%;
+  height:70vh;
+  border-bottom: 2px solid $baseColor;
+  color: $textColor;
+}

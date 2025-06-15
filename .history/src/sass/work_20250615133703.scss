@@ -1,0 +1,53 @@
+$bgColor:#227a6b;
+$textColor:#eee;
+$baseColor:#F2FFF4;
+$borderColor:#222;
+
+.container {
+  display: flex; // 横並びにする
+  height: auto; // 高さは中身に応じて自動
+  min-height: 100vh;
+  background: $bgColor;
+}
+
+.menu {
+  width: 50px;
+  height: 100vh;
+  background: darken($bgColor, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: sticky; // 必要に応じてスクロール追従もできる
+  top: 0;
+  ul {
+    writing-mode: vertical-rl;
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    align-items: center;
+    li {
+      height: 80px;
+      list-style: none;
+      a {
+        font-size: 2rem;
+        font-weight: 100;
+        color: $textColor;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: lighten($textColor, 20%);
+          letter-spacing: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.workContent {
+  flex: 1; // 残りの横幅を使用
+  padding: 4rem; // 左のメニューと間をあける
+  height: 70vh;
+  border-bottom: 2px solid $baseColor;
+  color: $textColor;
+}
