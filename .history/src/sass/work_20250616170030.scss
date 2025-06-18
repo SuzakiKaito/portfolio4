@@ -1,0 +1,189 @@
+$bgColor:#227a6b;
+$textColor:#eee;
+$baseColor:#F2FFF4;
+$borderColor:#222;
+// #1e5f54
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  display: flex;
+}
+
+.menu {
+  width: 50px;
+  height: 100vh;
+  background: #1e5f54;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    writing-mode: vertical-rl;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    li {
+      height: 80px;
+      list-style: none;
+      a {
+        font-size: 1.8rem;
+        font-weight: 100;
+        color: #eeeeee;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: lighten(#eeeeee, 20%);
+          letter-spacing: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  margin-left: 50px; // navの幅ぶん空ける
+  padding: 2rem;
+  background: $bgColor;
+  width: calc(100% - 50px);
+  height: 495vh;
+}
+
+.workContent {
+  height: 80vh;
+  border-bottom: 2px solid #F2FFF4;
+  color: #eeeeee;
+  padding: 2rem;
+  .work{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    figure{
+      width: 45%;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+    }
+    .candleContent{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      .candle{
+        height: 480px;
+        width: 250px;
+      }
+    }
+    .explain{
+      width: 45%;
+      display: flex;
+      justify-content:flex-start ;
+      flex-flow: column;
+      .flex{
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        h2{
+          font-size: 1.6rem;
+          width: 20%;
+        }
+        h3{
+          width: 75%;
+          font-size: 1.6rem;
+          // line-height:40px;
+        }
+      }
+      a{
+        font-size: 1.6rem;
+        text-align: right;
+        color: $textColor;
+        border-bottom:3px $baseColor dotted;
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: color 0.3s ease-in-out;
+      }
+    }
+    &:hover {
+      img {
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+@media screen and (max-width:500px){
+  .menu {
+    position: fixed;        // ここが重要
+    top: 0;
+    left: 0;
+    width: 100vw;           // vw指定もOK
+    height: 50px;
+    background-color: #1e5f54;
+    z-index: 1000;
+    // opacity: .4;
+    flex-direction: row;
+
+    ul {
+      writing-mode: horizontal-tb;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      
+      // gap: 10px;            // 少し隙間あけるのがおすすめ
+      list-style: none;     // 忘れずに
+    }
+
+    li {
+      height: auto;
+      width: 80px;
+      line-height: 80px;
+      // text-align: center;
+      text-align: center;
+      a {
+        width: 100%;
+        display: block;
+        font-size: 1.4rem;
+        // color: red !important; // ちゃんと色変わるならOK
+        text-decoration: none;
+      }
+    }
+  }
+  .container{
+    margin-left: 0;
+    width: 100%;
+    height: 610vh;
+  }
+  .workContent{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    .work{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-flow: column;
+      figure{
+        width: 90%;
+        img{
+          width: 100%;
+          // height: 100%;
+        }
+      }
+      .explain{
+        width: 100%;
+      }
+    }
+  }
+}

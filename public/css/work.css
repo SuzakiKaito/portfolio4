@@ -70,6 +70,8 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .workContent .work .candleContent {
   width: 50%;
@@ -106,4 +108,77 @@ body {
   border-bottom: 3px #F2FFF4 dotted;
   text-decoration: none;
   margin-bottom: 20px;
+  transition: color 0.3s ease-in-out;
+}
+.workContent .work:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 500px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #1e5f54;
+    z-index: 1000;
+    flex-direction: row;
+  }
+  .menu ul {
+    -ms-writing-mode: lr-tb;
+        writing-mode: horizontal-tb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+  }
+  .menu li {
+    height: auto;
+    width: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+  .menu li a {
+    width: 100%;
+    display: block;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+  .container {
+    margin-left: 0;
+    width: 100vw;
+    height: 645vh;
+    margin: 0;
+    padding: 0;
+  }
+  .workContent {
+    width: 100vw;
+    height: 100vh;
+    margin: 50px 0 0 0;
+    padding: 0;
+  }
+  .workContent .bungee {
+    padding: 20px 0 0 10px;
+  }
+  .workContent .work {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+  }
+  .workContent .work figure {
+    width: 80%;
+  }
+  .workContent .work figure img {
+    width: 100%;
+  }
+  .workContent .work .explain {
+    width: 90%;
+  }
+  .workContent .work .explain .flex h2 {
+    padding: 0;
+  }
 }

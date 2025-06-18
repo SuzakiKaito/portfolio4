@@ -1,0 +1,14 @@
+// .workContent をすべて取得
+const workContents = document.querySelectorAll('.workContent');
+
+workContents.forEach((content) => {
+  const anchorTag = content.querySelector('a');
+
+  content.addEventListener('mouseover', () => {
+    anchorTag.style.color = '#FFD700'; // ホバー時の色
+  });
+
+  content.addEventListener('mouseout', () => {
+    anchorTag.style.color = '#eee'; // 元の色
+  });
+});

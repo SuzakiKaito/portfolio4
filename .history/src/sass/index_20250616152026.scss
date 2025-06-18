@@ -1,0 +1,356 @@
+$bgColor:#227a6b;
+$baseColor:#F2FFF4;
+$textColor:#eeeeee;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap');
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;  // これがないとbodyがhtmlの高さに追従しないことがあります    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::before, *::aftr {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Outfit", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.profileContent {
+  width: clamp(500px, 50vw, 50%);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $bgColor;
+  border: 0.5px solid #111;
+  overflow: hidden;
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  transform: translateX(0);
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/stone.jpg') repeat;
+    background-size: cover;
+    opacity: 0.2;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  .menu {
+    background: #1e5f54;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    ul {
+      writing-mode: vertical-rl;
+      display: flex;
+      gap: 5rem;
+      li {
+        height: 80px;
+        list-style: none;
+        a {
+          font-size: 2rem;
+          font-weight: 100;
+          color: $textColor;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            color: lighten($textColor, 20%);
+            letter-spacing: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    flex: 1;
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .face {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: $baseColor;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 3.2rem;
+      color: $textColor;
+      font-weight: 500;
+    }
+    .career {
+      font-size: 1.4rem;
+      color: $textColor;
+      margin-top: 7rem;
+      max-width: 80%;
+      list-style: none;
+      text-align: left;
+      li {
+        margin-bottom: 0.8rem;
+        line-height: 1.6;
+        strong {
+          font-weight: 600;
+          display: inline-block;
+          width: 4.5em;
+        }
+      }
+    }
+    .link {
+      margin-top: auto;
+      display: flex;
+      gap: 5rem;
+      figure {
+        width: 30px;
+        height: 30px;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.workContent {
+  width: 50%;
+  height: 100vh;
+  background: $baseColor;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  a.opus {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    background: $baseColor;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; // aタグの下線を消す
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease-in-out;
+    }
+    p {
+      position: absolute;
+      bottom: 2%;
+      right: 2%;
+      color: white; // 必要なら文字色を明示
+      background: rgba(0, 0, 0, 0.5); // 読みやすくする場合
+      padding: 0.4em 0.8em;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      span {
+        color: $baseColor;
+      }
+    }
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+  .skillSection {
+    padding: 5rem;
+    display: none;
+    background: #eee;
+    color: #222;
+    font-size: 1.6rem;
+    line-height: 2;
+    height: 100vh;
+    animation: fadeIn 0.6s ease-in-out;
+    > div:first-child {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      h3 {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        margin-bottom: 8rem;
+        > div {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          img {
+            width: 80px;
+          }
+          strong {
+            font-size: 1.6rem;
+          }
+        }
+        p {
+          margin: 0.5rem 0 0 0;
+          font-size: 1.4rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+  .futureContent {
+    height: 100vh;
+    display: none;
+    padding: 2rem;
+    font-size: 1.6rem;
+    background: #eee;
+    animation: fadeIn 0.6s ease-in-out;
+    h3,
+    p {
+      color: #111;
+    }
+    li {
+      margin-bottom: 2rem;
+      list-style: none;
+      margin:20px;
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img {
+          width: 80px;
+        }
+        strong {
+          font-size: 1.6rem;
+          color: #111;
+        }
+      }
+      p {
+        margin: 0.5rem 0 0 0;
+        font-size: 1.4rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// 共通スタイルはそのまま
+
+// レスポンシブ対応
+@media screen and (max-width: 600px) {
+  .profileContent,
+  .workContent {
+    position: static !important;
+    z-index: auto !important;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .profileContent {
+    height: auto;
+    overflow: visible;
+    border: none;
+    height: 100vh;
+  }
+
+  .profileContent .menu {
+    position: fixed;        // ここが重要
+    top: 0;
+    left: 0;
+    width: 100vw;           // vw指定もOK
+    height: 50px;
+    background-color: #1e5f54;
+    z-index: 1000;
+    // opacity: .4;
+    flex-direction: row;
+
+    ul {
+      writing-mode: horizontal-tb;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      
+      // gap: 10px;            // 少し隙間あけるのがおすすめ
+      list-style: none;     // 忘れずに
+    }
+
+    li {
+      height: auto;
+      width: 80px;
+      line-height: 80px;
+      // text-align: center;
+      text-align: center;
+
+      a {
+        width: 100%;
+        display: block;
+        font-size: 1.4rem;
+        // color: red !important; // ちゃんと色変わるならOK
+        text-decoration: none;
+      }
+    }
+  }
+  .content{
+    .career{
+      margin-bottom: 50px;
+    }
+    .link{
+      margin-top: 30px;
+    }
+  }
+  .workContent{
+    height: 60vh;
+    .opus{
+      width: 100vw;
+      height: 30vh;
+      position: relative;
+      img {
+        max-width: 90vw;
+        max-height: 30vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        // position: relative;
+      }
+      p{
+        position: absolute;
+        bottom: 100px;
+      }
+    }
+  }
+}
