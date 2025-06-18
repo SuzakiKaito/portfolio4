@@ -319,7 +319,10 @@ body {
     margin-top: 30px;
   }
   .workContent {
-    height: 65vh;
+    height: auto;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    background: #eee;
   }
   .workContent a.opus {
     width: 100vw;

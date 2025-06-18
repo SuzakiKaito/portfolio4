@@ -333,6 +333,7 @@ body {
   .workContent{
     height: auto;
     overflow: hidden;
+    height: 0; /* 初期状態で非表示にする場合 */
     transition: height 0.5s ease;
     background: #eee;
     a.opus{

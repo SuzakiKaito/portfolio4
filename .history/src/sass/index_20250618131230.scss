@@ -284,6 +284,7 @@ body {
     border: none;
     height: 100vh;
   }
+
   .profileContent .menu {
     position: fixed;        // ここが重要
     top: 0;
@@ -331,10 +332,7 @@ body {
     }
   }
   .workContent{
-    height: auto;
-    overflow: hidden;
-    transition: height 0.5s ease;
-    background: #eee;
+    height: 100vh;
     a.opus{
       width: 100vw;
       height: 30vh;

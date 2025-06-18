@@ -30,7 +30,6 @@ window.addEventListener('load', () => {
   }
 });
 
-//.workContentの高さを160vhに
 document.addEventListener("DOMContentLoaded", () => {
   const skillMenu = document.querySelector('.skillMenu a');
   const workContent = document.querySelector('.workContent');
