@@ -121,42 +121,10 @@ body {
   }
 }
 .backTop{
-  display: none;
-  width: 80px;
-  height: 80px;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-  cursor: pointer;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: #eee;
-  z-index: 1000;
-  p{
-    color:$bgColor;
-    line-height: 80px;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    animation: jump 2s infinite;
-  }
-}
-.backTop.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-@keyframes jump{
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px); /* 上にジャンプ */
-  }
-  100% {
-    transform: translateY(0);
-  }
+  border: 1px solid #eee;
 }
 
 @media screen and (max-width:500px){

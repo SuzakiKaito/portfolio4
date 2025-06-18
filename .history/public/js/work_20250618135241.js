@@ -29,12 +29,10 @@ window.addEventListener('scroll', () => {
   const windowHeight = window.innerHeight;
   const documentHeight = document.documentElement.scrollHeight;
 
-  if (scrollY + windowHeight >= documentHeight - 2000) {
-    // 表示とアニメーションを同時に制御
-    backTop.style.display = 'block';
+  
+  if (scrollY + windowHeight >= documentHeight - 10) {
     backTop.classList.add('show'); // フェードイン
   } else {
     backTop.classList.remove('show'); // フェードアウト
-    backTop.style.display = 'none';
   }
 });

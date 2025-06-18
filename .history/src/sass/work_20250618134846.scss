@@ -124,8 +124,7 @@ body {
   display: none;
   width: 80px;
   height: 80px;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  // border: 1px solid #eee;
   cursor: pointer;
   position: fixed;
   bottom: 20px;
@@ -138,15 +137,9 @@ body {
     line-height: 80px;
     text-align: center;
     font-size: 1.2rem;
-    font-weight: 600;
     animation: jump 2s infinite;
   }
 }
-.backTop.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 @keyframes jump{
   0% {
     transform: translateY(0);

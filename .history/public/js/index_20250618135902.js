@@ -30,6 +30,27 @@ window.addEventListener('load', () => {
   }
 });
 
+// //.workContentの高さを160vhに
+// document.addEventListener("DOMContentLoaded", () => {
+//   const skillMenu = document.querySelector('.skillMenu a');
+//   const workContent = document.querySelector('.workContent');
+
+//   skillMenu.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const isExpanded = workContent.classList.contains('expanded');
+
+//     if (isExpanded) {
+//       workContent.style.height = '0px';
+//       workContent.classList.remove('expanded');
+//     } else {
+//       workContent.style.height = workContent.scrollHeight + 'px';
+//       workContent.classList.add('expanded');
+//     }
+
+//     workContent.style.transition = 'height 0.5s ease';
+//   });
+// });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const skillMenu = document.querySelector('.skillMenu a');
@@ -41,19 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
     workContent.style.transition = 'height 0.5s ease';
   };
 
-  const isMobile = () => window.matchMedia('(max-width: 500px)').matches;
-
   skillMenu.addEventListener('click', (e) => {
     e.preventDefault();
-    if (isMobile()) {
-      setHeight('130vh');
-    }
+    setHeight('130vh');
   });
 
   futureMenu.addEventListener('click', (e) => {
     e.preventDefault();
-    if (isMobile()) {
-      setHeight('130vh');
-    }
+    setHeight('180vh');
   });
 });

@@ -22,19 +22,19 @@ document.querySelector('.backTop').addEventListener('click', () => {
 });
 
 
-const backTop = document.querySelector('.backTop');
+// const backTop = document.querySelector('.backTop');
 
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const documentHeight = document.documentElement.scrollHeight;
+// window.addEventListener('scroll', () => {
+//   const scrollY = window.scrollY;
+//   const windowHeight = window.innerHeight;
+//   const documentHeight = document.documentElement.scrollHeight;
 
-  if (scrollY + windowHeight >= documentHeight - 2000) {
-    // 表示とアニメーションを同時に制御
-    backTop.style.display = 'block';
-    backTop.classList.add('show'); // フェードイン
-  } else {
-    backTop.classList.remove('show'); // フェードアウト
-    backTop.style.display = 'none';
-  }
-});
+//   if (scrollY + windowHeight >= documentHeight - 10) {
+//     // 一番下付近なら表示
+//     backTop.style.display = 'block';
+//   } else {
+//     // それ以外では非表示
+//     backTop.style.display = 'none';
+//   }
+// });
+

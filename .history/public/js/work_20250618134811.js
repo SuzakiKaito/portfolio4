@@ -30,11 +30,11 @@ window.addEventListener('scroll', () => {
   const documentHeight = document.documentElement.scrollHeight;
 
   if (scrollY + windowHeight >= documentHeight - 2000) {
-    // 表示とアニメーションを同時に制御
+    // 一番下付近なら表示
     backTop.style.display = 'block';
-    backTop.classList.add('show'); // フェードイン
   } else {
-    backTop.classList.remove('show'); // フェードアウト
+    // それ以外では非表示
     backTop.style.display = 'none';
   }
 });
+

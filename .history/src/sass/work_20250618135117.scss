@@ -126,6 +126,7 @@ body {
   height: 80px;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
+  
   cursor: pointer;
   position: fixed;
   bottom: 20px;
@@ -142,11 +143,6 @@ body {
     animation: jump 2s infinite;
   }
 }
-.backTop.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 @keyframes jump{
   0% {
     transform: translateY(0);

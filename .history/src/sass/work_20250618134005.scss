@@ -121,32 +121,20 @@ body {
   }
 }
 .backTop{
-  display: none;
   width: 80px;
   height: 80px;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-  cursor: pointer;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   border-radius: 50%;
-  background: #eee;
-  z-index: 1000;
+  border: 1px solid #eee;
+  cursor: pointer;
+  margin: 20px auto;
   p{
-    color:$bgColor;
+    color: #eee;
     line-height: 80px;
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
     animation: jump 2s infinite;
   }
 }
-.backTop.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 @keyframes jump{
   0% {
     transform: translateY(0);

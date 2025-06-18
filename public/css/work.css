@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
 }
@@ -115,6 +116,45 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.backTop {
+  display: none;
+  width: 80px;
+  height: 80px;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background: #eee;
+  z-index: 1000;
+}
+.backTop p {
+  color: #227a6b;
+  line-height: 80px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: jump 2s infinite;
+}
+
+.backTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* 上にジャンプ */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @media screen and (max-width: 500px) {
   .menu {
     position: fixed;
