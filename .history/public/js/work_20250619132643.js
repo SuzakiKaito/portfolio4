@@ -40,15 +40,3 @@ window.addEventListener('scroll', () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const targetId = params.get("scrollTo");
-
-  if (targetId) {
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      // スムーズスクロール
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-});

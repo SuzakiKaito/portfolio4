@@ -64,16 +64,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const scrollTo = params.get('scrollTo');
 
   if (scrollTo === 'skill') {
+    // skillセクションを表示し、他のセクションを非表示
     document.querySelectorAll('.opus').forEach(el => el.style.display = 'none');
     document.querySelector('.skillSection').style.display = 'block';
     document.querySelector('.futureContent').style.display = 'none';
+
+    // スクロール（必要なら）
     document.querySelector('.skillSection').scrollIntoView({ behavior: 'smooth' });
   }
 
-  if (scrollTo === 'future') {
-    document.querySelectorAll('.opus').forEach(el => el.style.display = 'none');
-    document.querySelector('.futureContent').style.display = 'block';
-    document.querySelector('.skillSection').style.display = 'none';
-    document.querySelector('.futureContent').scrollIntoView({ behavior: 'smooth' });
-  }
+  // 既存のハッシュ判定（#scroll）も併用するならここに残してOK
 });
