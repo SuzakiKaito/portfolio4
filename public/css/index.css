@@ -264,7 +264,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .profileContent,
   .workContent {
     position: static !important;
@@ -313,10 +313,94 @@ body {
     text-decoration: none;
   }
   .content .career {
-    margin-bottom: 50px;
+    margin: 30px 0 50px;
   }
   .content .link {
     margin-top: 30px;
+  }
+  .workContent {
+    height: auto;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    background: #eee;
+  }
+  .workContent a.opus {
+    width: 100vw;
+    height: 30vh;
+    position: relative;
+  }
+  .workContent a.opus img {
+    max-width: 100vw;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  .workContent a.opus p {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 390px) {
+  .profileContent,
+  .workContent {
+    position: static !important;
+    z-index: auto !important;
+    width: 390px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .profileContent {
+    height: auto;
+    overflow: visible;
+    border: none;
+    height: 100vh;
+  }
+  .profileContent .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #1e5f54;
+    z-index: 1000;
+    flex-direction: row;
+  }
+  .profileContent .menu ul {
+    -ms-writing-mode: lr-tb;
+        writing-mode: horizontal-tb;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+  }
+  .profileContent .menu li {
+    height: auto;
+    width: 70px;
+    line-height: 80px;
+    text-align: center;
+  }
+  .profileContent .menu li a {
+    width: 100%;
+    display: block;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+  .content {
+    align-items: center;
+  }
+  .content .career {
+    margin: 3rem 0 4rem !important;
+    width: 300px;
+  }
+  .content .career li {
+    width: 300px;
   }
   .workContent {
     height: auto;

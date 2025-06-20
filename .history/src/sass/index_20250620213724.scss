@@ -358,7 +358,7 @@ body {
   }
 }
 
-@media (max-width: 390px) {
+@media screen and (max-width: 390px) {
   .profileContent,
   .workContent {
     position: static !important;
@@ -416,7 +416,7 @@ body {
     // justify-content: ;
     align-items: center;
     .career{
-      margin: 3rem 0 4rem !important;
+      margin:3rem 0;
       width: 300px;
       // padding-bottom: 80px;
       li{

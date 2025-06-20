@@ -222,3 +222,71 @@ body {
     padding: 0;
   }
 }
+@media (max-width: 390px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #1e5f54;
+    z-index: 1000;
+    flex-direction: row;
+  }
+  .menu ul {
+    -ms-writing-mode: lr-tb;
+        writing-mode: horizontal-tb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    list-style: none;
+  }
+  .menu li {
+    height: auto;
+    width: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+  .menu li a {
+    width: 100%;
+    display: block;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+  .container {
+    margin-left: 0;
+    width: 100vw;
+    height: 710vh;
+    margin: 0;
+    padding: 0;
+  }
+  .workContent {
+    width: 100vw;
+    height: 110vh;
+    margin: 50px 0 0 0;
+    padding: 0;
+  }
+  .workContent .bungee {
+    padding: 20px 0 0 10px;
+  }
+  .workContent .work {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+  }
+  .workContent .work figure {
+    width: 80%;
+  }
+  .workContent .work figure img {
+    width: 100%;
+  }
+  .workContent .work .explain {
+    width: 90%;
+  }
+  .workContent .work .explain .flex h2 {
+    padding: 0;
+  }
+}

@@ -324,7 +324,7 @@ body {
   }
   .content{
     .career{
-      margin:30px 0 50px;
+      margin-bottom: 50px;
     }
     .link{
       margin-top: 30px;
@@ -358,7 +358,7 @@ body {
   }
 }
 
-@media (max-width: 390px) {
+@media screen and (max-width: 390px) {
   .profileContent,
   .workContent {
     position: static !important;
@@ -388,7 +388,7 @@ body {
     ul {
       writing-mode: horizontal-tb;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       width: 100vw;
       align-items: center;
       height: 100%;
@@ -398,7 +398,7 @@ body {
 
     li {
       height: auto;
-      width: 70px;
+      width: 80px;
       line-height: 80px;
       // text-align: center;
       text-align: center;
@@ -413,15 +413,16 @@ body {
     }
   }
   .content{
-    // justify-content: ;
-    align-items: center;
     .career{
-      margin: 3rem 0 4rem !important;
+      margin:0 0 30px;
       width: 300px;
       // padding-bottom: 80px;
       li{
         width: 300px;
       }
+    }
+    .link{
+      margin-top: 30px;
     }
   }
   .workContent{
