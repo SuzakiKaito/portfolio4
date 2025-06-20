@@ -58,14 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// const isMobile390 = () => window.matchMedia('(max-width: 390px)').matches;
+const isMobile390 = () => window.matchMedia('(max-width: 390px)').matches;
 
-// skillMenu.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   if (isMobile390()) {
-//     setHeight('500vh');
-//   }
-// });
+skillMenu.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (isMobile390()) {
+    setHeight('160vh');
+  }
+});
 
 
 
